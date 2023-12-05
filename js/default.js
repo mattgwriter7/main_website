@@ -45,7 +45,7 @@ $(function() {
 	//	positionBottomRightItems() grabs
 	//	co-ordinates of objects using something like:
 	//		data-bottom-right="10x10"
-	//	positions them accordingly
+	//	and positions them accordingly
 	function positionBottomRightItems() {
 		$.each( $('[data-bottom-right]'), function (index) {
 			let str = $(this).attr('data-bottom-right'),
@@ -77,16 +77,16 @@ $(function() {
 		});
 		return;
 	}		
-	// 	===========================================	
-	//	EVENT HANDLERS (non-delegated)
-	// 	===========================================	
 	
-	//	click "show me!" button to show a Panel
-	//	WILLFIX: If there is a need for more than
-	//		one type of button this will need refactoring...
-	$( 'button.show_me' ).click(function(){
-		var panel = $(this).attr('data-panel'),
-				sticky = $(this).attr('data-sticky');
+	window.alertMe = function() {
+		alert('You have been alerted!');
+	}
+	
+	//	openPanel() opens a specified panel
+	//	( usually when "show me" button clicked )
+	window.openPanel = function ( obj ) {
+		var panel = $(obj).attr('data-panel'),
+				sticky = $(obj).attr('data-sticky');
 		//	update spinner
 		$( '#' + panel + ' .spinner' ).addClass('active');
 		$( '#' + panel + ' .spinner_mssg' ).text('fetching...');
@@ -99,12 +99,22 @@ $(function() {
 			//	load the panel content
 			//	WILLFIX: ?? make this full on AJAX so I can
 			//	add a slideDown ?? maybe, maybe not...
-			$( '#' + panel ).load( './' + panel + '.htm',function(data){
+			$( '#' + panel ).load( './PANELS/' + panel + '.htm',function(data){
 				//	position new panel icons ( if needed )
 				positionTopLeftItems();
 				positionBottomRightItems();
 			});			
 		}, 2000);		
+	}		
+	// 	===========================================	
+	//	EVENT HANDLERS (non-delegated)
+	// 	===========================================	
+	
+	//	click "show me!" button to show a Panel
+	//	WILLFIX: If there is a need for more than
+	//		one type of button this will need refactoring...
+	$( 'button.show_me' ).click(function(){
+		openPanel(this);
 	});
 	
 	// 	===========================================	
@@ -114,6 +124,24 @@ $(function() {
 	//	click Stickies to hide		
 	$('body').on('click', '.sticky',function( event ) {
 		$( this ).fadeOut();
+	});	
+	
+	//	reveal hidden content	
+	$('body').on('click', '.show_hidden',function( event ) {
+		
+		//	show hidden panel
+		let panel = $(this).attr('data-panel');
+		$( '#' + panel + ' .hidden_content' ).slideDown();
+		
+		// 	hide stickies in this panel
+		//	WILLFIX? Does this need refinement? (Like: if
+		//	not all stickies should be hidden?	
+		$( '#' + panel + ' .sticky' ).hide();
+		
+		//	disable button
+		$( this ).addClass('greyed');
+		$( this ).attr('disabled','true');
+		// $( 'table#all_jobs .blink' ).remove();
 	});	
 	
 	// 	===========================================	

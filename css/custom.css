@@ -13,7 +13,8 @@
 		GENERAL COMMON SELECTORS
 		========================================= */
 
-		body.software header h3 {
+		/* add Canadian flag to header */
+		body header h3 {
 			background-image: url('../images/canadian_flag.png');
 			background-repeat: no-repeat;
 			background-position: 0 0px;
@@ -27,7 +28,7 @@
 		
 		div#place_arrow1 { display: inline-block; padding-top: 8px; }
 
-		div#SOFTWARE div.separator { margin: 85px 0 55px 0; }
+		div#DEVELOPER div.separator { margin: 85px 0 55px 0; }
 			
 
 /* 	=========================================

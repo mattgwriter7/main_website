@@ -149,6 +149,8 @@ table {
 		p:not(:last-child) { margin-bottom:1em; }
 		b { font-weight: bold; }
 		i { font-style: oblique; }
+						.b { font-weight: bold }
+						.i { font-style: oblique; }
 
 		/* LINKS */
 		a:link, a:visited, a:hover, a:active { color: blue; }
@@ -408,7 +410,7 @@ table {
 			width: 32px;
 		}
 		
-
+		.hidden_content { display: none; }
 
 
 /* 	=========================================
@@ -635,7 +637,7 @@ table {
 						margin-top: -10px; }
 					
 					span.l_quote, span.r_quote { font-size: 60px; line-height: 0; }
-					span.l_quote { position: absolute; left: 5px; top: 50px; }
+					span.l_quote { position: absolute; left: 1px; top: 50px; }
 					span.r_quote { position: absolute; right: 5px; bottom: 37px; }
 					/* END OF MOBILE ASIDE STYLES */
 					
