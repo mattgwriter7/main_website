@@ -4,7 +4,35 @@
 	//	The PHP is very small for this project.
 	//	It amounts to the version number, and
 	//	some include files.
-	$ver = '1Q.05';	// version number
+	$ver = '1T.01';	// version number
+
+	//	WILLFIX:  I need logic here to set the site key
+	//						( detect URL? querystring? )
+	//	SITE KEY 
+	$site_key = 'writer';	//	<-- the only thing that needs to change!
+	
+	// 	PANEL CONSTANTS
+	$writing_panel = '<a name="WRITER" /></a><div id="WRITER" class="panel"><div class="closed">Do you want to see<br /><b class="r big">MY WRITING</b> section?<br /><button class="show_me" data-panel="WRITER">show me!</button> </div></div><!-- end:panel -->';
+	$about_panel = '<a name="ABOUT" /></a><div id="ABOUT_' . $site_key . '" class="panel"><div class="closed">Do you want to read my<br /><b class="r big">ABOUT ME</b> write-up?<br /><button class="show_me" data-panel="ABOUT_' . $site_key . '">show me!</button> </div></div><!-- end:panel -->';
+	$developer_panel = '<a name="DEVELOPER" /></a><div id="DEVELOPER" class="panel"><div class="closed">Do you want to see my<br /><b class="r big">SOFTWARE DEVELOPER</b> write-up?<br /><button class="show_me" data-panel="DEVELOPER">show me!</button> </div></div><!-- end:panel -->';
+
+	//	LITTLE SNIPPETS ( defaults to mattgwriter7 ) 
+	$label = 'MATTGWRITER7';
+	$tag_line = 'Hire me to write... <i>any</i>thing!';
+	
+	//	DEFAULT PANEL ORDER ( defaults to mattgwriter7 )
+	$panel1 = $writing_panel;
+	$panel2 = $about_panel;
+	$panel3 = $developer_panel;
+	
+	//	RE-JIG ORDER OF PANELS ( if necessary )	
+	if ( $site_key == 'developer' ) {
+		$label = 'MATTGARVIN.COM';
+		$tag_line = 'Software Developer';
+ 		$panel1 = $developer_panel;
+		$panel2 = $about_panel;
+		$panel3 = $writing_panel;
+	}
 
 ?><!DOCTYPE html>
 <html lang="en-US" dir="ltr">
@@ -26,12 +54,12 @@
 </style>
 </head>
 
-<body class="software">
+<body class="<?php print $site_key; ?>"><!-- class: Website.site_key -->
 
 	<header>
 		<section>
-			<h1>MATT GARVIN</h1>
-			<h3>Software Developer</h3>
+			<h1><?php print $label; ?></h1>
+			<h3><?php print $tag_line; ?></h3>
 		</section>	
 	</header>
 	
@@ -42,116 +70,11 @@
 	<main>
 		<section>		
 
-
-
+				<?php print $panel1; ?>
 			
-			<a name="INTRO" /></a>	
-			<div id="INTRO" class="panel">
-				<div class="interior">
-				
-					<h1>Hey Now!</h1>
-
-					<p class="dropcap">Y<b>ou hit the jackpot, baby!</b> 
-						You did it! 
-						You have discovered a one-of-a-kind 
-						<b class="r big">SOFTWARE&nbsp;DEVELOPER</b> 
-						that will add unbelievable 
-						value to your project, your team, and your life.
-					</p>
-
-					<aside>
-						<img src="./images/mattgarvin.jpg">
-						<div>
-							<b class="r big">
-								<span class="material-icons big" style="transform: rotate(90deg);">&#xe5d9;</span>This
-								Dude?</b> That's
-								The Notorious "MRG." 
-								If I gotz to spell it out for you, the
-								"MRG" is for "Matthew R. Garvin." As for
-								the middle initial, that is
-								just part of the whole mystique.<br>
-								<span class="note">
-									Photo taken 2023-10-30
-								</span>	
-						</div>
-					</aside>
-					
-					<br />
-					<h2>5 Things About Matty&nbsp;G!</h2>
-					<ol class="touchup1">
-						<li>I have a highly rated App on 
-							<b class="r">Google&nbsp;Play</b> that I created using 
-							<b class="r">Flutter</b>&#153;</li>
-						<li>I am a published author with
-							a passive income every month from
-							my writing</li>
-						<li>In high school my nickname was 
-							&ldquo;Matty&nbsp;Bob&rdquo; because I
-							lived in Kentucky before moving to
-							Toronto</li>
-						<li>In high school my nickname was 
-							&ldquo;Matty&nbsp;Bob&rdquo; because I
-							lived in Kentucky before moving to
-							Toronto</li>
-						<li>In high school my nickname was 
-							&ldquo;Matty&nbsp;Bob&rdquo; because I
-							lived in Kentucky before moving to
-							Toronto</li>							
-					</ol>
-					
-					<button id="btn_1more">more!</button>
-					<div id="place_arrow1">
-						<div class="blink" data-blinks="0"><span class="material-icons big" data-top-left="2x5">&#xe5c4;</span><b>click</b></div>
-					</div>
-					
-					<br clear="left" />
-					<br /><br />
-					 
-					<h2>Top 3 Skills</h2>	
-						<p>These are the skills that separate me
-							from other Developers:</p>
-							
-					<div class="grid_3 featured">
-						<div class="box grey">
-							<h3 class="r">COMMUNICATION</h4>
-								I am a native English
-								speaker with super-strong spoken
-								and written comm skills
-							<span class="material-icons" style="color: #666;">&#xebba;</span>
-						</div>
-						<div class="box pink">
-							<h3 class="r">RESOURCEFULLNESS</h4>
-							<span class="material-icons" style="color: #ff93ac;">&#xea24;</span>
-								<span style="relative;">With internet access
-								and a couple hours, I can
-								teach myself anything on
-								almost anything</span>
-						</div>
-						<div class="box blue">
-							<h3 class="r">KNOWLEDGE</h4>
-								I have a breadth of knowledge
-								that has touched on most
-								internet tech over a long
-								career
-								<span class="material-icons" style="color: #53a7d8;">&#xea19;</span>
-						</div><!-- end: box -->		
-					</div><!-- end this grid row -->							
-							
-					<br />		
-					
-					<h2>What Else?</h2>
-					<p>There is plenty else, friend.  But I don't want
-						to drown you with too much info right up front.
-					</p>
-					
-					<p>Look at the sections below and decide for
-					yourself what write-ups you want to see by clicking
-					the blue buttons.</p>
-					
-				</div><!-- end:interior -->
-			</div><!-- end:panel -->
+				<?php print $panel2; ?>
 			
-			
+				<?php print $panel3; ?>
 			
 
 
@@ -161,32 +84,14 @@
 
 			
 			
-			<a name="SOFTWARE" /></a>
-			<div id="SOFTWARE" class="panel">
-
-				<div class="closed">
-					Do you want to see my<br />
-					<b class="r big">SOFTWARE DEVELOPER</b> write-up?<br />
-					<button class="show_me" data-panel="SOFTWARE">show me!</button>
-				</div>	
-
-			</div><!-- end:panel -->
+			
 
 
 
 			
 			
 			
-			<a name="WRITER" /></a>
-			<div id="WRITER" class="panel">
 
-				<div class="closed">
-					Do you want to see<br />
-					<b class="r big">MY WRITING</b> section?<br />
-					<button class="show_me" data-panel="WRITER">show me!</button>
-				</div>	
-
-			</div><!-- end:panel -->
 
 
 			
@@ -245,9 +150,16 @@
 		crossorigin="anonymous"></script>
 	<script>
 	//	make a JavaScript object called JS
-	//	( which gets used by default.js )
-	let JS = {}
+	//	( which gets used by default.js ), plus
+	//	indicate 'site_key' ( writer, developer, remoter )	
+	let JS = {};
 			JS.ver = '<?php print $ver; ?>';
+	var site_key,
+			alertMe,		//	used to show JS working
+			openPanel;	//	redefined in jQuery to open panels
+			
+			site_key = '<?php print $site_key; ?>'; <!-- class: Website.site_key -->
+			
 	</script>			
 	<script src="./js/default.js?ver=<?php print $ver; ?>"></script>
 	<script src="./js/custom.js?ver=<?php print $ver; ?>"></script>	
