@@ -1,0 +1,667 @@
+/* 
+		http://meyerweb.com/eric/tools/css/reset/ 
+		v2.0 | 20110126
+		License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+/* 
+		That's it for the "reset".  From here on is my own code:
+		"GENERAL" stuff is used for all of my sites, and
+		"CUSTOM" stuff is for a specific instances...
+*/
+
+
+		
+		
+/* 	=========================================
+		GENERAL COMMON SELECTORS
+		========================================= */
+
+		html, body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 16px;
+			height: 100%;
+			overflow-x: hidden;
+			position: relative;
+		}
+				
+		main { 
+			padding: 1.5em 0;  
+		}
+		
+		/* 	sections are for centering header, footer, 
+				and main content */
+		section {
+			margin: 0 auto;
+			position: relative;
+			width: 1200px;
+		}
+
+		main section {			
+			border: 1.5em solid transparent;
+			box-sizing: border-box;
+			clear: both;
+			min-height: 300px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		
+		header { 
+			padding: 2em 0 2.5em 0;
+		}
+		
+		footer { 
+			min-height: 770px;
+			padding: 0; 
+		}		
+
+		/* HEADINGS */
+		h1, h2, h3 {
+			padding: 0;
+			line-height: 1.1;
+		}
+		
+		h1 { 
+			font-family: 'Roboto Slab', serif; 
+			font-size: 60px; letter-spacing: 2px; font-weight: bold;
+			text-shadow: 1px 1px 1px #fff, 3px 3px 0px #999;
+			margin: 0 0 20px 0;
+		}
+
+		h2 {
+			font-family: 'Roboto Slab', serif; 
+			font-size: 40px; letter-spacing: 1px; font-weight: bold;
+			text-shadow: 1px 1px 1px #fff, 3px 3px 0px #999;
+			margin: 0 0 10px 0;
+		}
+		
+		h3 {
+			font-family: 'Roboto Slab', serif;
+			font-weight: bold;
+			font-size: 100%;
+			margin: 0 0 0 0;
+		}
+		
+		h1.short, h2.short, h3.short,
+		h1.tight, h2.tight, h3.tight {
+			margin-bottom: 0;
+		}
+		
+		h1.tall, h2.tall, h3.tall {
+			margin: 0 0 20px 0;
+		}			
+		
+		pre { -moz-tab-size: 2; }
+		pre { tab-size: 2; }
+
+		/* FONT STYLES */
+		/* 	make paragraphs that are not last have a bottom margin, adapted from
+				https://stackoverflow.com/questions/36321736/manage-margins-so-that-the-last-elements-have-no-margins	*/
+		p:not(:last-child) { margin-bottom:1em; }
+		b { font-weight: bold; }
+		i { font-style: oblique; }
+
+		/* LINKS */
+		a:link, a:visited, a:hover, a:active { color: blue; }
+		a.black:link, a.black:visited, a.black:hover, 
+		a.black:active { color: #000; }
+		
+		hr {
+			clear: both;
+			border-style: none;			
+			height: 0;
+			border-top: 5px solid #fff;
+			margin: 20px 0 5px 0;
+		}
+
+		ol { list-style: decimal; margin-left: 1.25em; line-height: 1.5; }
+			li { margin-bottom: 10px; }
+		ul { list-style: disc; margin-left: 1em; }		
+
+/* 	=========================================
+		GENERAL SPECIAL CLASSES
+		========================================= */
+		.note			{ font-size: 82%; line-height: 1.1; font-style:oblique;  }
+		.desktop  {}
+		.mobile		{ display: none; }
+/* 	=========================================
+		GENERAL FONT SIZING AND STYLING
+		========================================= */
+		
+		/* font sizing  */
+		.tiny 		{ font-size: 72%; }
+		.small 		{ font-size: 90%; }
+		.normal 	{ font-size: 100%; }
+		.big 			{ font-size: 120%; letter-spacing: 1px; }
+		.huge 		{ font-size: 150%; letter-spacing: 1px; }
+
+		/* font styling  */
+		.o, .oswald 		{ font-family: 'Oswald', sans-serif;  }
+		.v, .verdana 		{ font-family: Verdana, Geneva, sans-serif; }
+		.r, .roboto 		{ font-family: 'Roboto Slab', serif;  }	
+		.m, .mono, pre 	{ font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; }
+
+		b.o, b.r, b.m { font-weight: normal; }
+		b.o 					{ font-family: 'Oswald', sans-serif;  }
+		b.r 					{ font-family: 'Roboto Slab', serif;  }
+		b.m 					{ font-family: Courier New, Courier, Lucida Sans 	
+											Typewriter, Lucida Typewriter, monospace; }	
+											
+						.m, b.m {font-weight: bold; }						
+						/* 	^ the Mono versions are bolded cuz it looks better that way */
+						
+						.code { font-family: Courier New, Courier, Lucida Sans 	
+								Typewriter, Lucida Typewriter, monospace; 
+							font-weight: bold; padding-left: 1em;
+						}
+		/* DROP CAP */
+		/* 	this dropcap code was adapted from
+				https://www.newyorker.com/ */
+		div.dropcap::first-letter,
+		p.dropcap::first-letter {
+			/* font-family: TNYAdobeCaslonPro, "Times New Roman", Times, serif; */
+			font-family: 'Roboto Slab', serif;
+			letter-spacing: normal;
+			line-break: auto;
+			line-height: 75px;
+			font-size: 75px;
+			font-weight: 400;
+			overflow-wrap: normal;
+			float: left;
+			margin: -3px 0 -10px 0;
+			padding: 0px 0.05em 0px 0px;
+		}
+		
+		/* STICKIES */
+		div.sticky {
+			position: absolute;
+			padding: .5em;
+			box-sizing: border-box;
+			background-color: #ffd700;
+			margin-bottom: 10px;
+			border: 3px solid #ffbf00;
+			box-shadow: 2px 2px 7px black;
+			line-height: 1.2;
+			cursor: pointer;	
+			max-width: 50%;	
+			/* display: none; */
+		}		
+								.bottom_right { right: 10px; bottom: 5px; }
+								.top_right { right: 10px; top: 30px; }
+		
+		/* PANELS */
+		div.panel { 
+			border-top: 4px dotted #000; 
+			line-height: 1.5;
+			margin-top: 1em;
+			font-size: 130%;
+			position: relative;
+			box-sizing: border-box;
+			clear: both;
+			padding-top: .5em;
+		}
+		
+		div.panel:last-child { 
+			border-bottom: 4px dotted #000;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+		}
+		
+		div.panel div.closed { padding: 3em 2em 3em 2em; line-height: 2; }
+		div.panel div.interior { padding: 3em 2em 3em 2em; } 
+		
+		
+		
+		
+		/* GRIDS and BOXES */
+		.grid_1 { grid-template-columns: 1fr; }		
+		.grid_2 { grid-template-columns: 1fr 1fr; }
+		.grid_3 { grid-template-columns: 1fr 1fr 1fr; }
+
+		.grid_1, .grid_2, .grid_3 {
+    	display: grid;
+    	column-gap: 1.5em;
+    	margin-bottom: 1.5em;
+		}		
+
+		.box {
+			padding: 0;
+			position: relative;
+			background-color: #ccc;
+			min-height: 180px;			/* WILLFIX: good height? */
+			box-sizing: border-box;
+		}
+								/*	box tweaks */
+								.box.blank {
+										padding: 0;
+										background-color: transparent;
+										min-height: auto;
+								}
+										
+								.box.caption {
+										padding: 0;
+										background-color: #ccc;
+										min-height: auto;
+										margin-top: 1em;
+								}		
+
+								.box.caption.white { background-color: #fff; }	
+								
+								.box.caption img { width: 100%; }
+
+								.box.caption p { padding: 0 5px 7px 12px; line-height: 1.1; }
+								
+								.box.caption.white p { 
+									padding-left: 0; 
+									font-size: 80%;
+									line-height: .5;
+									text-align: right;
+								}
+
+								/* "featured" grid styles */
+								div.featured .box { padding: 1em; position: relative; } 
+								div.featured h3 { margin-bottom: 7px; }		
+								div.featured  span.material-icons {
+									position: absolute; right: 8px; top: 6px;					
+									font-size: 200%;
+								}
+									
+		/* start of aside ( with an image, or a quote ) */	
+		aside {
+			width: 50%; 
+			padding: 0; margin: 0 0 1.5em 1.5em;
+			float: right;
+			box-sizing: border-box;
+			line-height: 0;
+		}
+		
+					aside img { width: 100%; }
+					
+					aside div { 
+						line-height: 1.2;
+						padding: 8px 10px 12px 15px;
+					}
+					
+					aside div:not(:first-child) {
+						background-color: #ddd;			
+					}
+
+					aside.quote div:not(:first-child) {
+						background-color: transparent;		
+						text-align: right;	
+					}
+
+					blockquote {
+						line-height: 1.1;
+						background-color: #fff;
+						padding: 30px 50px;
+						font-size: 200%;
+						position: relative;
+					}
+					blockquote p.dropcap::first-letter { font-size: 300%; 
+						margin-top: 1px; }
+					
+					span.l_quote, span.r_quote { font-size: 100px; line-height: 0; }
+					span.l_quote { position: absolute; left: 5px; top: 46px; }
+					span.r_quote { position: absolute; right: 50px; bottom: 37px; }
+					/* end of asides and blockquotes */					
+								
+								
+		/* BUTTONS ( used in PANELS ) */
+		button {
+			margin-top: 10px;
+			background: #3498db;
+			background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+			background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+			background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+			background-image: -o-linear-gradient(top, #3498db, #2980b9);
+			background-image: linear-gradient(to bottom, #3498db, #2980b9);
+			-webkit-border-radius: 11;
+			-moz-border-radius: 11;
+			border-radius: 11px;
+			font-family: 'Roboto Slab', serif;
+			color: #ffffff;
+			font-size: 20px;
+			padding: 8px 20px 10px 20px;
+			text-decoration: none;
+			border-width: 3px;
+		}
+
+		button:hover {
+			background: #3cb0fd;
+			background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+			background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+			background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+			background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+			background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+			text-decoration: none;
+			cursor: pointer;
+		}		
+		button.greyed,
+		button.greyed:hover		{ background: #999; color: #ccc; cursor: default; }
+		
+		/* SPINNER stuff */
+		div.spinner {
+			visibility: visible;
+			width: 32px;
+			height: 32px;
+			line-height: 0;
+			position: relative;
+			top:-16px;
+			right: -1px;
+			display: inline-block;
+			width: 0px;
+		}
+
+		div.spinner.active {
+			background-image: url('../images/spinner.gif');
+			display: inline-block;
+			width: 32px;
+		}
+		
+
+
+
+/* 	=========================================
+		CUSTOM COLORS
+		========================================= */
+
+		html, body, 
+		header,
+		footer 				{ background-color: #1c567e; } 	/* the document */	
+		main					{ background-color: #ccc; }			/* behind the page */
+		main section 	{ background-color: #fff; }			/* the "page" */
+		
+		div.blue 		{	background-color: #89cff0; }
+		div.green 	{	background-color: #a5d6a7; }
+		div.grey 		{	background-color: #ccc; }
+		div.pink 		{	background-color: pink; }
+		div.yellow 	{	background-color: #ffe699; }
+
+		/* TAGS */
+		div.tag, span.tag {
+			padding: 0 4px;
+			background-color: #ddd;
+			display: inline-block;
+			margin: 0 0 2px 2px;
+		}
+		
+		div.tag.blue, span.tag.blue 			{ background-color: #89cff0; }
+		div.tag.green, span.tag.green 		{ background-color: #a5d6a7; }
+		div.tag.grey, span.tag.grey 			{ background-color: #ccc; }
+		div.tag.pink, span.tag.pink 			{ background-color: pink; }
+		div.tag.yellow, span.tag.yellow 	{ background-color: #ffe699; }		
+
+/* 	=========================================
+		CUSTOM HEADER
+		========================================= */
+
+		header h1 {
+			font-size: 85px;
+			font-family: 'Oswald', sans-serif;
+			color: #fff;
+			letter-spacing: 1px;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px #000, 3px 3px 0px #999;
+			display: inline-block;
+			box-sizing: border-box;			
+			line-height: 1.0;
+			margin: 12px 0 12px 0;
+		}	
+
+		header h3 {
+			color: #fff;
+			font-weight: normal;
+			margin: 7px 0 15px 5px;
+			font-size: 25px;
+		}
+
+/* 	=========================================
+		CUSTOM HERO
+		========================================= */
+		
+		div#hero {
+			background-color: #fff;
+			height: 200px;
+			background-image: url('../images/hero_background.jpg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;		
+		}
+		
+/* 	=========================================
+		CUSTOM FOOTER
+		========================================= */
+
+		footer,		
+		footer a:link, footer a:visited, footer a:hover, footer a:active { color: #fff; }
+
+		footer h3 {
+			font-family: 'Roboto Slab', serif; 
+			font-weight: normal;
+		}
+
+		footer .grid { 
+    	column-gap: 1.5em;
+			display: grid;
+			grid-template-columns: 1fr 1fr; 
+			margin: .25em 1em 1.5em 0;
+		}
+
+		footer .grid .medium, footer .grid .github, footer .grid .reddit, 
+		footer .grid .linked, footer .grid .twitter
+		{
+			background-color: transparent;
+			min-height: 95px;
+			padding: 10px 20px 0 100px;
+			line-height: 1.3;
+			background-image: url('../images/footer_sprites_big.png');
+			background-repeat: no-repeat;
+			background-size: 276px 1380px;
+			box-sizing: border-box;
+		}
+		footer .grid .medium { background-position: -91px -636px; } 
+		footer .grid .reddit { background-position: -91px -912px;  }
+		footer .grid .github { background-position: -91px -85px; padding-top: 31px; }
+		footer .grid .linked { background-position: -91px -360px; padding-top: 31px; }
+		footer .grid .twitter { background-position: -91px -1187px; padding-top: 31px; }
+
+		footer .offsite_icon { position: relative; }
+		footer .offsite_icon .material-icons { right: -20px; top: 3px; position: absolute; font-size: 100%; }
+
+		footer #contact_box {
+			text-align: center;
+			font-size: 200%;
+			line-height: 1.5;
+			padding: 2em 5px 200px 5px;
+		}
+
+				footer #contact_box .material-icons {
+					font-size: 120%;
+					position: relative;
+					left: -1px; top: 8px; 
+				}
+				
+				footer #contact_box .material-icons.phone { 
+					rotate: 22deg; left: 5px; 
+				}
+
+		footer .grid div.note { padding-top: 3px; }
+
+		/* highlight color */
+		.hilite b, 
+		footer .offsite_icon .material-icons,
+		footer #contact_box .material-icons
+		{ color: #99ccff; }
+
+
+
+		div.separator { 
+			border-top: 1px solid #999; 
+			box-sizing: border-box;
+			padding: 0; 
+			margin: 95px 0 100px 0;		
+		}
+
+
+/* 	=========================================
+		LITTLE TOUCHES
+		========================================= */
+		
+		ol.touchup1 {
+			margin: 0 1.5em 1.5em 3em;	
+		}
+		
+		ol.touchup1 li::marker {
+			font-family: 'Roboto Slab', serif;
+			font-size: 150%;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px #fff, 2px 2px 0px #999;
+		}	
+
+
+/* 	=========================================
+		MOBILE AND NARROW DEVICES
+		========================================= */
+
+@media all and (max-width: 1200px) { 
+
+	/* MOBILE LAYOUT TWEAKS */
+	html, body { background-color: #1c567e;	}
+	
+		main { padding: 0; }
+		section { width: 100%; }
+		main section { padding: 0; border: none; }
+
+	/* MOBILE HEADING TWEAKS */
+	h1 { 	font-size: 50px; letter-spacing: .2vw; }
+	h2 { 	font-size: 30px; letter-spacing: normal; 
+				text-shadow: 1px 1px 1px #fff, 2px 2px 0px #999;
+	}	
+	
+	/* MOBILE PANEL TWEAKS */
+	div.panel { border-color: #72a0c1; }
+	div.panel:last-child { border-bottom-color: #72a0c1; }
+	div.panel div.closed { padding: 3.6em 0.8em 3em 0.8em; }
+	div.panel div.interior { padding: 2em 0.8em 3em 0.8em; position: relative; }
+	div.panel:not(:first-child) div.interior { padding-top: 2em; }
+	
+	/* MOBILE GRID AND BOX TWEAKS */
+	.grid_1, .grid_2, .grid_3  { display: block; margin: 0; }
+	div.box { margin-bottom: 1em; padding: .75em; }
+	
+	/* MOBILE SPECIAL CLASSES */
+		.desktop  { display: none; }
+		.mobile		{ display: block; }
+		span.mobile		{ display: inline-block; }		
+		span.rel { position: relative !important; }
+		.abs { position: absolute; }
+		div.separator { 
+			border-top: 1px solid #999; 
+			padding: 0; margin: 77px 0 100px 0; }		
+
+	/* MOBILE STICKIES */
+	div.sticky { max-width: 45%; }
+			.bottom_right { right: 25px; }	
+			.top_right { top: 16px; right: 25px; }	
+
+
+
+	/* START OF MOBILE ASIDE STYLES */
+	aside {
+		width: 100%;
+		padding: 0;
+		margin: 0 0 2.5em 0;
+		float: none;
+	}	
+	
+					blockquote {
+						line-height: 1.1;
+						background-color: #fff;
+						padding: 30px 20px;
+						font-size: 130%;
+						position: relative;
+					}
+					blockquote p.dropcap::first-letter { font-size: 70px; 
+						margin-top: -10px; }
+					
+					span.l_quote, span.r_quote { font-size: 60px; line-height: 0; }
+					span.l_quote { position: absolute; left: 5px; top: 50px; }
+					span.r_quote { position: absolute; right: 5px; bottom: 37px; }
+					/* END OF MOBILE ASIDE STYLES */
+					
+					
+									/* MOBILE HEADER AND HERO */
+									header {}										
+					
+									header h1 { font-size: 40px; margin: 1px 0 1px 20px;
+															text-shadow: 1px 1px 1px #000, 2px 2px 0px #999;
+														}	
+
+									header h3 { margin: 7px 0 0 20px; font-size: 16px; }									
+
+									div#hero { height: 110px }		
+					
+									/* MOBILE FOOTER */
+									footer .grid { 
+										grid-template-columns: 1fr;
+										margin: .25em .5em 1em .5em;
+									}
+
+									footer #contact_box { font-size: 5vw; }
+									/* 	footer #contact_box .material-icons.main { }	
+											footer #contact_box .material-icons.phone { }	*/
+									footer #contact_box .material-icons { left: -3px; top: 6px; }
+									
+									
+}
+

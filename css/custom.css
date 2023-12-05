@@ -1,0 +1,44 @@
+/* 
+		custom.css
+		
+		That's it for the "reset".  From here on is my own code:
+		"GENERAL" stuff is used for all of my sites, and
+		"CUSTOM" stuff is for a specific instances...
+*/
+
+
+		
+		
+/* 	=========================================
+		GENERAL COMMON SELECTORS
+		========================================= */
+
+		body.software header h3 {
+			background-image: url('../images/canadian_flag.png');
+			background-repeat: no-repeat;
+			background-position: 0 0px;
+			height: 30px;
+			padding-left: 56px;
+		}
+		
+		h2.unaffected { text-shadow: none; }		
+
+		button#btn_1more { float: left; margin: 0 20px 0 61px; }
+		
+		div#place_arrow1 { display: inline-block; padding-top: 8px; }
+
+		div#SOFTWARE div.separator { margin: 85px 0 55px 0; }
+			
+
+/* 	=========================================
+		MOBILE AND NARROW DEVICES
+		========================================= */
+
+@media all and (max-width: 1200px) { 
+
+		header h3 { font-size: 25px; }
+
+}
+
+
+
