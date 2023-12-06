@@ -30,6 +30,20 @@
 
 		div#DEVELOPER div.separator { margin: 85px 0 55px 0; }
 			
+		 
+		div#refresher { 
+			display: inline-block; 
+			color: #999; position: absolute;
+			right: 5px; top: 0;
+			line-height: 2; font-size: 12px;
+			text-align: center;
+			font-weight: bold;
+		}
+		
+						div#refresher a { 
+							color: #276895; 
+							text-decoration: none;
+						}
 
 /* 	=========================================
 		MOBILE AND NARROW DEVICES

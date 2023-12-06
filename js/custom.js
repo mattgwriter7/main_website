@@ -2,7 +2,7 @@
 				//	Blinking blinkers!
 				APP.blink_max = 25;			//	how many blinks to, er, blink?
 				APP.blink = false;			//	visible or hidden?			
-				//	"5 Things About Matty G" thingy
+				//	"5 Things About Me" thingy
 				APP.things_index = 4;		// 0-4 were on the page already...
 				APP.things_arr = [
 					'','','','','',
@@ -27,7 +27,9 @@ $(function() {
 	// 	===========================================		
 
 	function init() {
-		//	alert( 'ok1 -> ' + window.site_key );
+		
+		addRefresher();
+		
 		//	alertMe();
 		
 		//	auto-click the first panel
@@ -64,6 +66,17 @@ $(function() {
 			}	
 		});		
 		return;
+	}
+	
+	//	the Refresher is a Div that has shortcuts
+	//	to reload with different site_keys:
+	//		D = developer
+	//		R = remoter
+	//		W = writer
+	function addRefresher() {
+		console.log( 'addRefresher()' );
+		let ref = '<div id="refresher" class="r"><a href="./?k=d">D</a><br /><a href="./?k=r">R</a><br /><a href="./?k=w">W</a><br /></div>';
+		$( 'footer section' ).prepend( ref );
 	}
 	
 	// 	===========================================	

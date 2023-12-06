@@ -4,12 +4,17 @@
 	//	The PHP is very small for this project.
 	//	It amounts to the version number, and
 	//	some include files.
-	$ver = '1T.08';	// version number
+	$ver = '1U.01';	// version number
 
-	//	WILLFIX:  I need logic here to set the site key
-	//						( detect URL? querystring? )
 	//	SITE KEY 
 	$site_key = 'writer';	//	<-- the only thing that needs to change!
+
+	//	WILLFIX:  Querystring used for Key
+	//						* probably should detect domain
+	$k  = '';
+	if (isset($_GET['k'])) { $k = trim($_GET['k']); }	
+	if ($k == 'd' ) { $site_key = 'developer'; }
+
 	
 	// 	PANEL CONSTANTS
 	$writing_panel = '<a name="WRITER" /></a><div id="WRITER" class="panel"><div class="closed">Do you want to see<br /><b class="r big">MY WRITING</b> section?<br /><button class="show_me" data-panel="WRITER">show me!</button> </div></div><!-- end:panel -->';
@@ -70,32 +75,12 @@
 	<main>
 		<section>		
 
+				
 				<?php print $panel1; ?>
 			
 				<?php print $panel2; ?>
 			
 				<?php print $panel3; ?>
-			
-
-
-
-
-
-
-			
-			
-			
-
-
-
-			
-			
-			
-
-
-
-			
-
 
 			
 		</section>		
