@@ -10,7 +10,7 @@
 					'When I was a kid I collected beer cans. (Did you know really old beer cans were opened with a can opener? They were called &ldquo;flat tops&rdquo;.)',
 					'In 2017 I traveled to Nashville to see a Total Solar Eclipse. (It was A-M-A-Z-I-N-G!) Another is happening in North America in 2024, so grab your eclipse glasses!',
 					'I have been to Mayan ruins in El Salvador (on a 7-month long backpacking trip through Central America)',
-					'I am an avid podcast listener.  My top two are &ldquo;The Lex Fridman Podcast&rdquo;, and &ldquo;Hardcore History&rdquo; by Dan Carlin',
+					'I am an avid podcast listener.  My top two faves are &ldquo;The Lex Fridman Podcast&rdquo;, and &ldquo;Hardcore History&rdquo; by Dan Carlin',
 					'I play Settlers of Catan online and am currently ranked at Grandmaster',
 					'Astronomy is one of my favorite topics. (Ask me about black holes, or impact craters, like the one in Sudbury!)',
 					'As of 2017 I went from being a "UFO skeptic" to believing aliens are here on Earth right now! (The truth is out there...)',
