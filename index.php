@@ -4,7 +4,7 @@
 	//	The PHP is very small for this project.
 	//	It amounts to the version number, and
 	//	some include files.
-	$ver = '1T.01';	// version number
+	$ver = '1T.08';	// version number
 
 	//	WILLFIX:  I need logic here to set the site key
 	//						( detect URL? querystring? )
@@ -18,7 +18,7 @@
 
 	//	LITTLE SNIPPETS ( defaults to mattgwriter7 ) 
 	$label = 'MATTGWRITER7';
-	$tag_line = 'Hire me to write... <i>any</i>thing!';
+	$tag_line = 'Writer for Hire';
 	
 	//	DEFAULT PANEL ORDER ( defaults to mattgwriter7 )
 	$panel1 = $writing_panel;
@@ -37,9 +37,9 @@
 ?><!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
-<title>Matt Garvin <?php print $ver; ?></title>
-<meta name="Keywords" content="">
-<meta name="Description" content="">
+<title>The Matt Garvin Project ver <?php print $ver; ?></title>
+<meta name="Keywords" content="remote worker, autodidact, matt garvin, writer, front end, IT professional, mattgwriter7, medium.com, github">
+<meta name="Description" content="Matt Garvin is a writer and IT professional operating out of Toronto, Ontario, but servicing... the whole planet, remotely!">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">

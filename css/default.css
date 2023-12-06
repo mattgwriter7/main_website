@@ -258,7 +258,8 @@ table {
 			margin-bottom: 1em;
 		}
 		
-		div.panel div.closed { padding: 3em 2em 3em 2em; line-height: 2; }
+		div.panel div.closed { padding: 2.5em 2em 3em 2em; line-height: 2; 
+			margin-top: 8px; background-color: #e0f4fb; }
 		div.panel div.interior { padding: 3em 2em 3em 2em; } 
 		
 		
@@ -399,13 +400,13 @@ table {
 			line-height: 0;
 			position: relative;
 			top:-16px;
-			right: -1px;
+			right: -3px;
 			display: inline-block;
 			width: 0px;
 		}
 
 		div.spinner.active {
-			background-image: url('../images/spinner.gif');
+			background-image: url('../images/spinner_blue.gif');
 			display: inline-block;
 			width: 32px;
 		}
@@ -560,7 +561,7 @@ table {
 		========================================= */
 		
 		ol.touchup1 {
-			margin: 0 1.5em 1.5em 3em;	
+			margin: 0 1.5em 1.5em 2em;	
 		}
 		
 		ol.touchup1 li::marker {
@@ -593,7 +594,7 @@ table {
 	/* MOBILE PANEL TWEAKS */
 	div.panel { border-color: #72a0c1; }
 	div.panel:last-child { border-bottom-color: #72a0c1; }
-	div.panel div.closed { padding: 3.6em 0.8em 3em 0.8em; }
+	div.panel div.closed { padding: 2.5em 0.8em 3em 0.8em; }
 	div.panel div.interior { padding: 2em 0.8em 3em 0.8em; position: relative; }
 	div.panel:not(:first-child) div.interior { padding-top: 2em; }
 	

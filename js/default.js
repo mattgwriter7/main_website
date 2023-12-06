@@ -18,7 +18,7 @@ $(function() {
 	}
 
 	//	--------------------------------------------
-
+	
 	//	addPanelSpinners()
 	//	this function looks for "closed panels" and
 	//	when found it adds an HTML/CSS spinner
@@ -99,7 +99,7 @@ $(function() {
 			//	load the panel content
 			//	WILLFIX: ?? make this full on AJAX so I can
 			//	add a slideDown ?? maybe, maybe not...
-			$( '#' + panel ).load( './PANELS/' + panel + '.htm',function(data){
+			$( '#' + panel ).load( './PANELS/' + panel + '.htm?t='+ Date.now(),function(data){
 				//	position new panel icons ( if needed )
 				positionTopLeftItems();
 				positionBottomRightItems();
