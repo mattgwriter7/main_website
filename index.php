@@ -4,7 +4,7 @@
 	//	The PHP is very small for this project.
 	//	It amounts to the version number, and
 	//	some include files.
-	$ver = '1U.01';	// version number
+	$ver = '1U.02';	// version number
 
 	//	SITE KEY 
 	$site_key = 'writer';	//	<-- the only thing that needs to change!
@@ -75,14 +75,24 @@
 	<main>
 		<section>		
 
-				
 				<?php print $panel1; ?>
 			
 				<?php print $panel2; ?>
 			
 				<?php print $panel3; ?>
 
-			
+				<!-- the BONUS panel is always last ... -->
+				<a name="BONUS" /></a>
+				<div id="BONUS" class="panel">
+
+					<div class="closed">
+						Do you want to see the<br />
+						<b class="r big">BONUS</b> section?<br />
+						<button class="show_me" data-panel="BONUS">show me!</button>
+					</div>	
+					
+				</div>
+				
 		</section>		
 	</main>
 
