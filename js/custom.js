@@ -70,12 +70,13 @@ $(function() {
 	
 	//	the Refresher is a Div that has shortcuts
 	//	to reload with different site_keys:
+	//		B = bonus (gamebook)
 	//		D = developer
 	//		R = remoter
 	//		W = writer
 	function addRefresher() {
 		console.log( 'addRefresher()' );
-		let ref = '<div id="refresher" class="r"><a href="./?k=d">D</a><br /><a href="./?k=r">R</a><br /><a href="./?k=w">W</a><br /></div>';
+		let ref = '<div id="refresher" class="r"><a href="./?k=b">B</a><br /><a href="./?k=d">D</a><br /><a href="./?k=r">R</a><br /><a href="./?k=w">W</a><br /></div>';
 		$( 'footer section' ).prepend( ref );
 	}
 	

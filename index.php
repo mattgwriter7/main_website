@@ -4,7 +4,7 @@
 	//	The PHP is very small for this project.
 	//	It amounts to the version number, and
 	//	some include files.
-	$ver = '1U.02';	// version number
+	$ver = '1V.02';	// version number
 
 	//	SITE KEY 
 	$site_key = 'writer';	//	<-- the only thing that needs to change!
@@ -14,12 +14,15 @@
 	$k  = '';
 	if (isset($_GET['k'])) { $k = trim($_GET['k']); }	
 	if ($k == 'd' ) { $site_key = 'developer'; }
+	if ($k == 'b' ) { $site_key = 'bonus'; }
 
 	
 	// 	PANEL CONSTANTS
 	$writing_panel = '<a name="WRITER" /></a><div id="WRITER" class="panel"><div class="closed">Do you want to see<br /><b class="r big">MY WRITING</b> section?<br /><button class="show_me" data-panel="WRITER">show me!</button> </div></div><!-- end:panel -->';
 	$about_panel = '<a name="ABOUT" /></a><div id="ABOUT_' . $site_key . '" class="panel"><div class="closed">Do you want to read my<br /><b class="r big">ABOUT ME</b> write-up?<br /><button class="show_me" data-panel="ABOUT_' . $site_key . '">show me!</button> </div></div><!-- end:panel -->';
 	$developer_panel = '<a name="DEVELOPER" /></a><div id="DEVELOPER" class="panel"><div class="closed">Do you want to see my<br /><b class="r big">SOFTWARE DEVELOPER</b> write-up?<br /><button class="show_me" data-panel="DEVELOPER">show me!</button> </div></div><!-- end:panel -->';
+	$bonus_panel = '<a name="BONUS" /></a><div id="BONUS" class="panel"><div class="closed">Do you want to see the<br /><b class="r big">BONUS</b> section?<br /><button class="show_me" data-panel="BONUS">show me!</button> </div></div>';
+
 
 	//	LITTLE SNIPPETS ( defaults to mattgwriter7 ) 
 	$label = 'MATTGWRITER7';
@@ -29,14 +32,24 @@
 	$panel1 = $writing_panel;
 	$panel2 = $about_panel;
 	$panel3 = $developer_panel;
+	$panel4 = $bonus_panel;
 	
 	//	RE-JIG ORDER OF PANELS ( if necessary )	
-	if ( $site_key == 'developer' ) {
+	if ( $site_key == 'developer' || $site_key == 'bonus' ) {
 		$label = 'MATTGARVIN.COM';
 		$tag_line = 'Software Developer';
- 		$panel1 = $developer_panel;
-		$panel2 = $about_panel;
-		$panel3 = $writing_panel;
+		if ( $site_key == 'developer' ) {
+			$panel1 = $developer_panel;
+			$panel2 = $about_panel;
+			$panel3 = $writing_panel;
+			$panel4 = $bonus_panel;
+		}
+		else {
+			$panel1 = $bonus_panel;
+			$panel2 = $about_panel;
+			$panel3 = $developer_panel;
+			$panel4 = $writing_panel;
+		}
 	}
 
 ?><!DOCTYPE html>
@@ -81,17 +94,7 @@
 			
 				<?php print $panel3; ?>
 
-				<!-- the BONUS panel is always last ... -->
-				<a name="BONUS" /></a>
-				<div id="BONUS" class="panel">
-
-					<div class="closed">
-						Do you want to see the<br />
-						<b class="r big">BONUS</b> section?<br />
-						<button class="show_me" data-panel="BONUS">show me!</button>
-					</div>	
-					
-				</div>
+				<?php print $panel4; ?>		
 				
 		</section>		
 	</main>
