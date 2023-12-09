@@ -4,7 +4,7 @@ This is the repo for my main website:
 
 ## DETAILS
 There are actually 3 versions of my site:  
-* [developer](https://mattgwriter7.com/?k=d)   
+* [developer](https://mattgarvin.com)   
 * [gamebook demo](https://mattgwriter7.com/?k=b)   
 * [writer](https://mattgwriter7.com/?k=w)    
 

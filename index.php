@@ -4,19 +4,36 @@
 	//	The PHP is very small for this project.
 	//	It amounts to the version number, and
 	//	some include files.
-	$ver = '1V.02';	// version number
+	$ver = '1V.03';	// version number
 
-	//	SITE KEY 
+	//	foundSiteName() searches the current URL
+	//	to see if a string can be found, and
+	//	returns true or false
+	//	see: https://stackoverflow.com/questions/6768793/get-the-full-url-in-php
+	
+	function foundSiteName ( $str ) {
+		$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+		$num = strpos( $url, $str );
+		$flag = true;
+		if( $num == -1 ) { $flag = false; }
+		return $num;		
+	}	
+
+	//	$site_key defaults to "writer/mattgwriter7"
+	//	but, if "mattgarvin.com" found in URL $site_key is "developer"
 	$site_key = 'writer';	//	<-- the only thing that needs to change!
+	if ( foundSiteName( 'mattgarvin.com' ) == true ) {
+		$site_key = 'developer';		
+	}
 
-	//	WILLFIX:  Querystring used for Key
-	//						* probably should detect domain
+	//	$site_key can be forced with querystring
 	$k  = '';
 	if (isset($_GET['k'])) { $k = trim($_GET['k']); }	
 	if ($k == 'd' ) { $site_key = 'developer'; }
 	if ($k == 'b' ) { $site_key = 'bonus'; }
 
-	
+	//	==========================================================================================
+
 	// 	PANEL CONSTANTS
 	$writing_panel = '<a name="WRITER" /></a><div id="WRITER" class="panel"><div class="closed">Do you want to see<br /><b class="r big">MY WRITING</b> section?<br /><button class="show_me" data-panel="WRITER">show me!</button> </div></div><!-- end:panel -->';
 	$about_panel = '<a name="ABOUT" /></a><div id="ABOUT_' . $site_key . '" class="panel"><div class="closed">Do you want to read my<br /><b class="r big">ABOUT ME</b> write-up?<br /><button class="show_me" data-panel="ABOUT_' . $site_key . '">show me!</button> </div></div><!-- end:panel -->';
