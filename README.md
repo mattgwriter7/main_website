@@ -1,6 +1,6 @@
 # ~ main_website ~
 This is the repo for my main website:   
-* [www.mattgwriter7.com](https://mattgwriter7.com/?k=d)
+* [mattgarvin.com](https://mattgarvin.com)
 
 ## DETAILS
 There are actually 3 versions of my site:  
