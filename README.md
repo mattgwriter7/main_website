@@ -2,6 +2,8 @@
 This is the repo for my main website:   
 * [mattgarvin.com](https://mattgarvin.com)
 
+<img src="https://mattgwriter7.com/assets/github/html_mattgarvin.jpg" width="300" title="screen cap from phone">   
+
 ## DETAILS
 There are actually 3 versions of my site:  
 * [developer](https://mattgarvin.com)   
