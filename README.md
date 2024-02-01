@@ -1,7 +1,8 @@
 # ~ main_website ~
 This is the repo for my main website:   
-* [mattgarvin.com](https://mattgarvin.com)
+* [mattgwriter7.com](https://mattgarvin.com)
 
+This is a screen cap of my site on mobile:   
 <img src="https://mattgwriter7.com/assets/github/html_mattgarvin.jpg" width="300" title="screen cap from phone">   
 
 ## DETAILS
